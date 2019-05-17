@@ -8,6 +8,7 @@
     "start:dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
     "start:dev-fresh": "npm run db && npm run start:dev",
     "build": "rm -rf dist && npx webpack --config webpack.config.js",
+    "postinstall": "npm run build",
     "test": "npm run test:dev",
     "test:dev": "npm run test:no-spec | tap-spec",
     "test:no-spec": "NODE_ENV=test ts-node --files -r tsconfig-paths/register node_modules/tape/bin/tape test/**/*.ts"
