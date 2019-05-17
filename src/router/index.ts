@@ -2,6 +2,7 @@ import { Router } from 'express';
 import * as asyncHandler from 'express-async-handler';
 import { getClassesFromArticleName, getArticlesFromClass } from 'src/lib/wikidata';
 import { getStructureFromArticles } from 'src/lib/articleStructure';
+import { getNewsReferences, getCoreReferences } from 'src/lib/references';
 
 const router = Router();
 
@@ -26,6 +27,16 @@ router.get('/articleTemplate/:classId',
     })
 );
 
+router.get('/references/:articleName/:sectionName',
+    asyncHandler(async (req, res) => {
+        const [news, references] = await Promise.all([
+            getNewsReferences(`${req.params.articleName} ${req.params.sectionName}`),
+            getCoreReferences(`${req.params.articleName} ${req.params.sectionName}`)
+        ]);
+
+        res.send({ references, news });
+    })
+);
 
 export {
     router

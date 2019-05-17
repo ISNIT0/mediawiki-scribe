@@ -13,4 +13,10 @@ export interface Config {
     port: number
     logLevel: LogLevel
   }
+  newsapi: {
+    key: string
+  }
+  core: {
+    key: string
+  }
 }

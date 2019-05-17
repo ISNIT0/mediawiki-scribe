@@ -50,6 +50,22 @@ const convictConfig = convict({
       env: 'LOG_LEVEL',
     },
   },
+  newsapi: {
+    key: {
+      doc: 'NewsAPI.org key',
+      format: String,
+      default: null,
+      env: 'NEWSAPI_KEY'
+    }
+  },
+  core: {
+    key: {
+      doc: 'core.ac.uk key',
+      format: String,
+      default: null,
+      env: 'CORE_KEY'
+    }
+  }
 })
 
 export { convictConfig }
