@@ -22,7 +22,6 @@ module.exports = {
   mode: 'none',
   entry: {
     web: './src/index.ts',
-    cron: './src/cron.ts',
   },
   // entry: './src/index.ts',
   target: 'node',
@@ -47,18 +46,6 @@ module.exports = {
   },
   plugins: [
     definePlugin,
-    new CopyWebpackPlugin([
-      {
-        from: 'src/utils/template/**',
-        to: 'template',
-        flatten: true,
-      },
-      {
-        from: 'src/contracts/**',
-        to: 'contracts',
-        flatten: true,
-      },
-    ]),
   ],
   resolve: {
     extensions: ['.ts', '.js'],
