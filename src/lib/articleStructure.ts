@@ -12,9 +12,11 @@ export async function getStructureFromArticles(articleIds: string[]) {
     const headingSizes = headingStructures.map(s => s.length);
     const meanNumberOfHeadings = Math.round(headingSizes.reduce((acc, s) => acc + s, 0) / headingSizes.length);
 
+    const headingStructuresToUse = headingStructures.filter(h => h.length >= meanNumberOfHeadings)
+
     const sectionHeadings = [];
     for (let i = 0; i < meanNumberOfHeadings; i++) {
-        const heading = getMostCommonHeadingAtIndex(headingStructures, i, sectionHeadings);
+        const heading = getMostCommonHeadingAtIndex(headingStructuresToUse, i, sectionHeadings);
         sectionHeadings.push(heading);
     }
 
