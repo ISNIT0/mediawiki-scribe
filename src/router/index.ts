@@ -29,12 +29,12 @@ router.get('/articleTemplate/:classId',
 
 router.get('/references/:articleName/:sectionName',
     asyncHandler(async (req, res) => {
-        const [news, references] = await Promise.all([
+        const [news, papers] = await Promise.all([
             getNewsReferences(`${req.params.articleName} ${req.params.sectionName}`),
             getCoreReferences(`${req.params.articleName} ${req.params.sectionName}`)
         ]);
 
-        res.send({ references, news });
+        res.send(news.concat(papers));
     })
 );
 
