@@ -10,7 +10,7 @@ export async function getCoreReferences(query: string) {
     const coreReferences = await getJSON<any>(`https://core.ac.uk:443/api-v2/search/${query}?page=1&pageSize=10&apiKey=${config.core.key}`);
     const referencesDetail = await Promise.all(
         coreReferences.data.slice(0, 3).map((r: any) => {
-            return getJSON<any>(`https://core.ac.uk:443/api-v2/articles/get/${r._id}?metadata=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${config.core.key}`)
+            return getJSON<any>(`https://core.ac.uk:443/api-v2/articles/get/${r._id}?metadata=true&urls=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${config.core.key}`)
                 .then(a => a.data);
         })
     );
