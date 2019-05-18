@@ -2,7 +2,8 @@ import { Router } from 'express';
 import * as asyncHandler from 'express-async-handler';
 import { getClassesFromArticleName, getArticlesFromClass } from 'src/lib/wikidata';
 import { getStructureFromArticles } from 'src/lib/articleStructure';
-import { getNewsReferences, getCoreReferences } from 'src/lib/references';
+import { getNewsReferences, getCoreReferences, getBingResults } from 'src/lib/references';
+import { translate } from 'src/lib/translate';
 
 const router = Router();
 
@@ -29,12 +30,18 @@ router.get('/articleTemplate/:classId',
 
 router.get('/references/:articleName/:sectionName',
     asyncHandler(async (req, res) => {
-        const [news, papers] = await Promise.all([
-            getNewsReferences(`${req.params.articleName} ${req.params.sectionName}`),
-            getCoreReferences(`${req.params.articleName} ${req.params.sectionName}`)
+
+        const sourceSearch = `${req.params.articleName} ${req.params.sectionName}`;
+
+        const enSearch = await translate(sourceSearch, 'en');
+
+        const [news, papers, search] = await Promise.all([
+            getNewsReferences(enSearch),
+            getCoreReferences(enSearch),
+            getBingResults(sourceSearch),
         ]);
 
-        res.send(news.concat(papers));
+        res.send(news.concat(papers).concat(search));
     })
 );
 

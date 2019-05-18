@@ -19,4 +19,8 @@ export interface Config {
   core: {
     key: string
   }
+  azure: {
+    translateKey: string
+    searchKey: string
+  }
 }

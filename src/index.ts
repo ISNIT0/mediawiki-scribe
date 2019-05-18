@@ -1,3 +1,5 @@
+///<reference path="./typings/shims.d.ts" />
+
 import * as express from 'express';
 import * as logger from 'morgan';
 import { router } from './router';

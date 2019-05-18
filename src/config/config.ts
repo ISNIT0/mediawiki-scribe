@@ -65,6 +65,20 @@ const convictConfig = convict({
       default: null,
       env: 'CORE_KEY'
     }
+  },
+  azure: {
+    translateKey: {
+      doc: 'Portal.azure.com translate text service key',
+      format: String,
+      default: null,
+      env: 'AZURE_TRANSLATE_KEY'
+    },
+    searchKey: {
+      doc: 'Portal.azure.com search service key',
+      format: String,
+      default: null,
+      env: 'AZURE_SEARCH_KEY'
+    }
   }
 })
 
