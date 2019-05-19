@@ -19,6 +19,36 @@
         "test",
         "talk"
       ]
+    },
+    {
+      "login": "merkur0",
+      "name": "merkur0",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19146450?v=4",
+      "profile": "https://github.com/merkur0",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "test",
+        "review"
+      ]
+    },
+    {
+      "login": "ISNIT0",
+      "name": "Joe Reeve",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5173131?v=4",
+      "profile": "https://simmsreeve.com",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "test",
+        "review",
+        "infra",
+        "tool",
+        "doc",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
