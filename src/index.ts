@@ -1,3 +1,4 @@
+// tslint:disable-next-line: no-reference
 ///<reference path="./typings/shims.d.ts" />
 
 import * as express from 'express';
@@ -19,7 +20,6 @@ app.use('/', router);
 
 (async () => {
     const port = process.env.PORT || 12180;
-    // await createConnection();
     app.listen(port);
     console.log('Listening on port', port);
-})().catch(e => console.error(e.stack));
+})().catch((e) => console.error(e.stack));

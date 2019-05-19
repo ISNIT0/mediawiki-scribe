@@ -1,8 +1,8 @@
 import * as MsTranslator from 'mstranslator';
-import { config } from "src/config";
+import { config } from 'src/config';
 
 const translateClient = new MsTranslator({
-    api_key: config.azure.translateKey
+    api_key: config.azure.translateKey,
 }, true);
 
 export function translate(text: string, targetLanguage: string): Promise<string> {
@@ -11,8 +11,7 @@ export function translate(text: string, targetLanguage: string): Promise<string>
             text,
             to: targetLanguage,
         }, (err: any, res: any) => {
-            if (err) reject(err);
-            else resolve(res);
-        })
+            if (err) { reject(err); } else { resolve(res); }
+        });
     });
 }

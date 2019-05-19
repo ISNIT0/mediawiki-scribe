@@ -1,5 +1,5 @@
-import { getJSON } from "./http";
-import { config } from "src/config";
+import { getJSON } from './http';
+import { config } from 'src/config';
 
 export async function getNewsReferences(query: string) {
     const newsReferences = await getJSON<any>(`https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${config.newsapi.key}`);
@@ -11,8 +11,8 @@ export async function getCoreReferences(query: string) {
     const referencesDetail = await Promise.all(
         coreReferences.data.slice(0, 2).map((r: any) => {
             return getJSON<any>(`https://core.ac.uk:443/api-v2/articles/get/${r._id}?metadata=true&urls=true&fulltext=false&citations=false&similar=false&duplicate=false&urls=false&faithfulMetadata=false&apiKey=${config.core.key}`)
-                .then(a => a.data);
-        })
+                .then((a) => a.data);
+        }),
     );
     return referencesDetail.filter((a: any) => a.downloadUrl).map(({ title, downloadUrl }) => ({ title, url: downloadUrl, type: 'paper' }));
 }
@@ -23,7 +23,7 @@ export async function getBingResults(query: string) {
         return {
             title: page.name,
             url: page.url,
-            type: 'search'
+            type: 'search',
         };
     });
 }

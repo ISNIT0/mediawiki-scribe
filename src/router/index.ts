@@ -10,14 +10,14 @@ const router = Router();
 router.get('/ruok',
     asyncHandler(async (req, res) => {
         res.send('IMOK');
-    })
+    }),
 );
 
 router.get('/classes/:articleName',
     asyncHandler(async (req, res) => {
         const classes = await getClassesFromArticleName(req.params.articleName);
         res.send(classes);
-    })
+    }),
 );
 
 router.get('/articleTemplate/:classId',
@@ -25,7 +25,7 @@ router.get('/articleTemplate/:classId',
         const articleIds = await getArticlesFromClass(req.params.classId);
         const bestStructure = await getStructureFromArticles(articleIds);
         res.send(bestStructure);
-    })
+    }),
 );
 
 router.get('/references/:articleName/:sectionName',
@@ -42,9 +42,9 @@ router.get('/references/:articleName/:sectionName',
         ]);
 
         res.send(news.concat(papers).concat(search));
-    })
+    }),
 );
 
 export {
-    router
+    router,
 };
