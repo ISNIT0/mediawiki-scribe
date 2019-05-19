@@ -1,6 +1,53 @@
-# TODO
+# Scribe
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-- write the README
+[![Build Status](https://travis-ci.org/ISNIT0/mediawiki-scribe.svg?branch=master)](https://travis-ci.org/ISNIT0/mediawiki-scribe)
+[![CodeFactor](https://www.codefactor.io/repository/github/isnit0/mediawiki-scribe/badge)](https://www.codefactor.io/repository/github/isnit0/mediawiki-scribe)
+![GitHub](https://img.shields.io/github/license/isnit0/mediawiki-scribe.svg)
+
+## Background
+@Lucy
+
+### What
+@Lucy
+
+### When
+This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019/).
+
+### Future Work
+@Lucy
+
+## Backend
+
+### Dependencies
+Running the Scribe server requires:
+- NodeJS >= `8.0.0`
+- *nix operating system
+- [NewsApi.org](https://newsapi.org/) api key
+- [Core.ac.uk](https://core.ac.uk/) api key
+- [Bing Search & Translate](https://portal.azure.com/#home) api keys
+
+### Developing
+```bash
+npm i
+cp .env.example .env
+# Update .env properties
+npm run start:dev
+```
+There is also a VSCode launch configuration in [`.vscode/launch.json`](.vscode/launch.json) which has debugging support.
+
+### Deploying
+The official Scribe backend is hosted on Heroku: [https://scribe-mediawiki.herokuapp.com/ruok](https://scribe-mediawiki.herokuapp.com/ruok)
+Contact @ISNIT0 for help with deploying this yourself
+
+## Gadget/common.js
+The "front-end" code can be found at [`./common.js`](./common.js). You will need to add this to your MediaWiki user's common.js, see [here](https://www.mediawiki.org/wiki/Manual:Interface/JavaScript) for more documentation.
+
+## Contributing
+Pull requests and issues are welcome. It's best to check with @luciekaffee as to her progress before spending much time developing this code-base.
+
+## License
+MIT - [LICENSE](./LICENSE)
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
