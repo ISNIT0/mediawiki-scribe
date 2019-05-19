@@ -1,0 +1,29 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "luciekaffee",
+      "name": "Lucie-Aimée Kaffee",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/28153924?v=4",
+      "profile": "https://github.com/luciekaffee",
+      "contributions": [
+        "question",
+        "blog",
+        "doc",
+        "ideas",
+        "projectManagement",
+        "test",
+        "talk"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "mediawiki-scribe",
+  "projectOwner": "ISNIT0",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
