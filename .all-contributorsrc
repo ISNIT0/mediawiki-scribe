@@ -19,6 +19,23 @@
         "test",
         "talk"
       ]
+    },
+    {
+      "login": "ISNIT0",
+      "name": "Joe Reeve",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5173131?v=4",
+      "profile": "https://simmsreeve.com",
+      "contributions": [
+        "bug",
+        "code",
+        "ideas",
+        "test",
+        "review",
+        "infra",
+        "tool",
+        "doc",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
