@@ -12,7 +12,7 @@
 @Lucy
 
 ### When
-This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019/).
+This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019).
 
 ### Future Work
 @Lucy
