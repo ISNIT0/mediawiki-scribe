@@ -20,7 +20,7 @@ Scribe supports editors in creating new articles. The focus of Scribe is twofold
 ![Poster of the Wikimedia Hackathon, adapted to add participants of the project](https://github.com/ISNIT0/mediawiki-scribe/blob/master/Copy%20of%20Scribe%20Poster%20Wikimedia%20Hackathon.png)
 
 ### When
-This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019/).
+This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019).
 
 ### Future Work
 This repository represents the prototype of Scribe. It is a proof of concept, and is not aimed to be in production in the current form. However, it is a starting point for the work of Scribe. 
