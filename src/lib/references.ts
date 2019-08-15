@@ -19,7 +19,7 @@ export async function getCoreReferences(query: string) {
 
 export async function getBingResults(query: string) {
     const results = await getJSON<any>(`https://api.cognitive.microsoft.com/bing/v7.0/search?q=${encodeURIComponent(`${query} NOT site:wikipedia.org`)}&count=3`, { 'Ocp-Apim-Subscription-Key': config.azure.searchKey });
-    return results.webPages.value.map((page: any) => {
+    return ((results.webPages || {}).value || []).map((page: any) => {
         return {
             title: page.name,
             url: page.url,
