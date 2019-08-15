@@ -1,0 +1,68 @@
+.qFrame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.qFrame .page {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: white;
+    padding: 5%;
+    pointer-events: initial;
+}
+
+.qFrame .editor-page {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.qFrame .editor-page .header {
+    height: 50px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: initial;
+}
+
+.editor-page .header button {
+    float: right;
+}
+
+.qFrame .editor-page .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow-x: scroll;
+    white-space: nowrap;
+    pointer-events: initial;
+}
+
+.qFrame .editor-page .footer .ref-card {
+    border: 2px solid red;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5%;
+    width: 70%;
+    background: rgba(50, 20, 20, 0.3);
+    display: inline-block;
+    white-space: pre-line;
+}
