@@ -6,16 +6,26 @@
 ![GitHub](https://img.shields.io/github/license/isnit0/mediawiki-scribe.svg)
 
 ## Background
-@Lucy
+Underserved Wikipedias (i.e. Wikipedias with a low number of articles and/or editors) often have a problem to recruit new editors to create high-quality articles. A lot of effort is invested into the recruitment and sustaining of new editors, especially in the human involvment level. For example, the Teahouse on English Wikipedia offers a plattform to exchange with other editors with a focus on a newcomer-friendly environment. 
+
+However, many of those efforts are limited in their application to the different Wikipedia communities. Particularly in under-resourced Wikipedia communities, the doubled commitment might lead to a decrease in productivity of the efforts. 
+
+Therefore, additionally to the community engagement, technical solutions to the problem need to be explored. 
 
 ### What
-@Lucy
+We proposed the tool **Scribe** in [previous work](http://tinyurl.com/WikipediaScribe). This repository presents the prototype of Scribe as a Wikipedia userscript.
+
+Scribe supports editors in creating new articles. The focus of Scribe is twofold: First, when editors start writing the article, the tool suggests them section headings, so that the have a skeleton for their article to fill. Second, Scribe suggests references for each section that the editors can choose to include. The goal is to support the writing of high-quality articles, that conform the standards of existing articles and have a high coverage of articles. 
+
+![Poster of the Wikimedia Hackathon, adapted to add participants of the project](https://github.com/ISNIT0/mediawiki-scribe/blob/master/Copy%20of%20Scribe%20Poster%20Wikimedia%20Hackathon.png)
 
 ### When
-This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019/).
+This version of Scribe was built from 17th-19th of May 2019 at the [Wikimedia Hackathon in Prague](https://www.mediawiki.org/wiki/Wikimedia_Hackathon_2019).
 
 ### Future Work
-@Lucy
+This repository represents the prototype of Scribe. It is a proof of concept, and is not aimed to be in production in the current form. However, it is a starting point for the work of Scribe. 
+The future work is tracked as tickets with the *future work* tag. Please refer to the issues to find details on the future work. 
+In summary, we will focus on a better selection of section headings and reference selection, with a focus on reference quality and appropriateness. 
 
 ## Backend
 
