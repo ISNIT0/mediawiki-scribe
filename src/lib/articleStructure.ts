@@ -20,7 +20,7 @@ export async function getStructureFromArticles(articleIds: string[]) {
         sectionHeadings.push(heading);
     }
 
-    return sectionHeadings;
+    return sectionHeadings.filter((a) => a.line !== 'References');
 }
 
 function getMostCommonHeadingAtIndex(headingStructures: SectionDefinition[][], index: number, ignoreHeadings: SectionDefinition[]) {
