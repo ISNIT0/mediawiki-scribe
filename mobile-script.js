@@ -279,7 +279,7 @@ function h(str, props = {}, children = []) {
 
         Promise.all(
             data.headings.map(async (heading) => {
-                const references = await getJSON(`https://scribe-mediawiki.herokuapp.com/references/Kreuzberg/${heading}`);
+                const references = await getJSON(`https://scribe-mediawiki.herokuapp.com/references/${articleTitle}/${heading}`);
                 return { heading, references };
             })
         ).then((...headingPairs) => {
